@@ -65,7 +65,7 @@ print(format_handle("tswift"))  # Should print: @tswift
 
 def is_trending(likes):
     return "True" if likes > 1000 else "False"
-def is_trending(likes)
+
 
 # Test it
 print(is_trending(500))   # Should print: False
