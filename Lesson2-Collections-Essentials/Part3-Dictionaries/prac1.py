@@ -17,3 +17,5 @@ players = [
 
 result = find_top_players(players, 7000)
 print(result)  # Should print: ['DragonSlayer', 'MageKing']
+
+
