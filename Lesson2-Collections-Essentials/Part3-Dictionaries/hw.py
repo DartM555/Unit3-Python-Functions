@@ -45,4 +45,4 @@ def calculate_cart_total(cart):
        total += item_cost
        return total
    
-   
+
