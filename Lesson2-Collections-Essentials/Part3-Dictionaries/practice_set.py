@@ -16,7 +16,7 @@ print(x)
 
 # Question #2 - Code Tracing
 
-# Answer: 120 ; 60
+# Answer: 120 ; 60.0
 
 # For the total, we add the two data values together, 100 and 20. 
 # We then divide that by 2 to get value Z, 60.
@@ -67,12 +67,30 @@ print(get_total_engagement({"likes": 100, "commments": 20, "shares": 10}))
 # Then we count the length of the data, which is 3
 
 # Question #8 - Code Tracing
+dict_a = {"key1": "value1"
+,
+"key2": 100}
 
-# Answer: 
+dict_b = dict_a
+dict_c = dict_a.copy()
+
+dict_a["key2"] = 200
+dict_b["key3"] = 50
+dict_c["key4"] = True
+
+print(dict_a)
+print(dict_c)
+
+# Answer: You will see :
+# {'key1': 'value1', 'key2': 200, 'key3': 50}
+# {'key1': 'value1', 'key2': 100, 'key4': True}
 
 # Question #9 - Code Writing
 def find_most_followed(users):
     for user in users:
         max_followers = 0
-        if user["followers"]
+        if user["followers"] > max_followers:
+            max_followers = user["followers"]
+            most_followed_user = user["username"]
+    return most_followed_user
 
