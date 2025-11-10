@@ -33,6 +33,14 @@
 
 # Question 3 - Code Writing - Find The Top Donar and print the name
 
+# Test
+donations = {
+    "neon": 250,
+    "vibe": 180,
+    "lunar": 400,
+    "pixel": 150
+}
+
 def find_top_donor(donations):
     top_donor = ""
     top_amount = -1
@@ -44,13 +52,6 @@ def find_top_donor(donations):
 
 
 
-# Test
-donations = {
-    "neon": 250,
-    "vibe": 180,
-    "lunar": 400,
-    "pixel": 150
-}
 
 print(find_top_donor(donations))
 
