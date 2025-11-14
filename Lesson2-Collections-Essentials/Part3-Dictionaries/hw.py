@@ -31,8 +31,12 @@ for playlist_name, songs in playlist.items():
         all_songs.append(song.upper())
 
 print(f"Total songs: {len(all_songs)}")
-print(f"First songs: {len(all_songs[0])}")
-print(f"Last songs: {len(all_songs[-1])}")
+if all_songs:
+    # Print the actual first and last song titles (already uppercased)
+    print(f"First song: {all_songs[0]}")
+    print(f"Last song: {all_songs[-1]}")
+else:
+    print("No songs found.")
 
 # Total Songs: 9
 # First Song: 16
