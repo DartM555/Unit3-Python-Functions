@@ -1,37 +1,37 @@
-# # Using keyword arguements
-# def create_gamer(username, level, xp, rank, online):
-#     """Create a gamer profile"""
-#     return{
-#         "username": username,
-#         "level": level,
-#         "xp": xp,
-#         "rank": rank,
-#         "online": online
-#     }
+# Using keyword arguements
+def create_gamer(username, level, xp, rank, online):
+    """Create a gamer profile"""
+    return{
+        "username": username,
+        "level": level,
+        "xp": xp,
+        "rank": rank,
+        "online": online
+    }
     
-# player1 = create_gamer(
-#     username = "BTStudent",
-#     level = 25,
-#     rank = "Gold",
-#     xp = 10000,
-#     online = True
-#     )
-# print(player1)
+player1 = create_gamer(
+    username = "BTStudent",
+    level = 25,
+    rank = "Gold",
+    xp = 10000,
+    online = True
+    )
+print(player1)
 
-# def send_message(sender, recipient, message, urgent):
-#     return {
-#         "sender": sender,
-#         "recipient": recipient,
-#         "message": message,
-#         "urgent": urgent,
-#     }
-# email = send_message(
-#       sender = "Alex",
-#       recipient = "Jordan",
-#      message = "Check Discord",
-#      urgent = True,
-#     )
-# print(send_message)
+def send_message(sender, recipient, message, urgent):
+    return {
+        "sender": sender,
+        "recipient": recipient,
+        "message": message,
+        "urgent": urgent,
+    }
+email = send_message(
+      sender = "Alex",
+      recipient = "Jordan",
+     message = "Check Discord",
+     urgent = True,
+    )
+print(send_message)
 
 
 def post_content(username,text,likes=0,retweets=0):
