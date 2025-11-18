@@ -1,6 +1,6 @@
 # Question #5 - Code Tracing
 
-# Answer: 18, 15
+# Answer: 18.0, 15.0
 
 # Question #6 - Code Writing
 
