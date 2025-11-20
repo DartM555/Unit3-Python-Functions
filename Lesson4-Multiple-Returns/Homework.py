@@ -1,5 +1,5 @@
+# Question #1
 def search_user_database(query):
- 
 
     if query.strip() == "":
           return None, "No search query", False
