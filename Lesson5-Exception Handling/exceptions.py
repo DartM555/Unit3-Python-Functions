@@ -1,22 +1,69 @@
-# Common Errors
-# #1 - Division by Zero
-# print(10/0)
+def safe_divide(a, b):
+    try:
+        result = a / b
+        return result
+    # except:
+    #     print("Can not divide  by zero! ")
+    #     return None
+    except ZeroDivisionError:
+        print("Can not divide  by zero! ")
+        return None
+    except TypeError:
+        print("That's not a number!")
+        return None
+    except:
+        print("An error occurred . . . ")
+          
+    
+print(safe_divide(10, 2)) #5.0
+print(safe_divide(10, 0)) #Can not divide  by zero!
+print(safe_divide(10, "hello")) 
+None
 
-#2 - Value Error
-# print(int("abc"))
 
-#3 - Key Error
-# grades = {"Bob":85,}
-# print(grades["Bill"])
+def safe_operations(a,b,lst,key,d):
+    try:
+        print(f"Division result: {a/b}") #ZeroDivisionError
+        TypeError
+        print("Accest list element:", lst[2]) # Index Error
+        print("Accest dictionary key:", d[key]) # KeyError
+        print(f"Add numbers: {a+b}") # TypeError
+    # except ZeroDivisionError:
+    #     print("Can not divide by zero!")
+    # except IndexError:
+    #     print("List index out of range!")
+    # except KeyError:
+    #     print(f"key {key} not found in dictionary")
+    # except TypeError:
+    #     print('Invalid types for operation!')
+    except Exception as e:
+        print("Some other error occurred", e)
 
-# #4 - Index Error
-# numbers = [1,2,3]
-# print(numbers[5])
+# print(safe_operations(10,2,[1,2], "Tom",{"John":15}))
+# print(safe_operations(10,0,[1,2], "Tom",{"John":15}))
+# print(safe_operations(10,[1,2], "Tom",
+# {"Tom":15}))
 
-##5 - Name Error
-# print(total)
-# total = 10
+def  calculate_price_per_item(cost, item_count):
+    try:
+        calculate_price_per_item = cost / item_count
+        return round(calculate_price_per_item, 2)
+    except ZeroDivisionError:
+        return "No Items to calculate"
+    
 
-# 6 - Syntax Error
-# for i in range(5):
-# print(i)
+print(calculate_price_per_item(100, 4)) 
+print(calculate_price_per_item(50, 0)) 
+# print(calculate_price_per_item(25, 50, 4)) 
+
+def parse_age(age_str):
+    try:
+        age = int(age_str)
+        return age
+    except ValueError:
+        return None
+        
+        
+    
+print(parse_age("25"))
+print(parse_age("twenty five"))
