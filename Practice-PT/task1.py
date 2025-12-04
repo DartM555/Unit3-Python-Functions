@@ -42,7 +42,7 @@ def calculate_remaining(total_seconds, played_seconds):
         return 0
   
   
-  
+
     return remaining
 
 

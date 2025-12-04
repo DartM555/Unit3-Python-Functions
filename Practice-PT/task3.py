@@ -1,37 +1,45 @@
 def playlist_stats(*durations):
-# 
-# """Calculate statistics for a playlist of songs.
+
+    """Calculate statistics for a playlist of songs.
     
-#     Accepts any number of song durations and returns the total time,
-#     number of songs, and average duration. If no durations are provided,
-#     returns zeros to avoid division errors.
+    Accepts any number of song durations and returns the total time,
+    number of songs, and average duration. If no durations are provided,
+    returns zeros to avoid division errors.
     
-#     Args:
-#         *durations: Any number of song durations in seconds (integers)
+    Args:
+        *durations: Any number of song durations in seconds (integers)
     
-#     Returns:
-#         tuple: A tuple of (total_time, song_count, average_duration)
-#                - total_time: sum of all durations (int)
-#                - song_count: number of songs (int)
-#                - average_duration: average length (float)
+    Returns:
+        tuple: A tuple of (total_time, song_count, average_duration)
+               - total_time: sum of all durations (int)
+               - song_count: number of songs (int)
+               - average_duration: average length (float)
     
-#     Examples:
-#         >>> playlist_stats(180, 210, 240, 195)
-#         (825, 4, 206.25)
+    Examples:
+        >>> playlist_stats(180, 210, 240, 195)
+        (825, 4, 206.25)
         
-#         >>> playlist_stats(300, 300)
-#         (600, 2, 300.0)
+        >>> playlist_stats(300, 300)
+        (600, 2, 300.0)
         
-#         >>> playlist_stats()
-#         (0, 0, 0.0)
-"""
+        >>> playlist_stats()
+        (0, 0, 0.0)
+
+
  TODO: Write your code here (replace 'pass')
     # Hint 1: Check if durations is empty FIRST (if not durations:)
     # Hint 2: Use sum() and len() for calculations
     # Hint 3: Return three values separated by commas
 """
+    if not durations:
+        return 0, 0, 0.0
+    
+    total_time = sum(durations)
+    song_count = len(durations)
+    avg_duration = total_time / song_count
+    
+    return total_time, song_count, avg_duration
 
-pass
 
 
 # =============================================================================
